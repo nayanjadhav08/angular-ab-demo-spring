@@ -1,0 +1,12 @@
+<p>Hello world</p>
+<button (click)="getWebData()">okay</button>
+
+
+<input type="number" name="id" [(ngModel)]="id">
+<input type="text" name="name" [(ngModel)]="name">
+<input type="number" name="salary" [(ngModel)]="salary">
+<ul>
+	<li *ngFor="let i of mydata">
+		{{i.empname}}
+	</li>
+</ul>
