@@ -9,7 +9,7 @@ export class AsyncdataService {
 
   constructor(private http: HttpClient) {}
   getHttpData() {
-    return this.http.get("http://localhost:8888/emp");
+    return this.http.get("http://localhost:8079/emp");
   }
 
   postHttpData(id, name, sal) {
@@ -23,8 +23,8 @@ export class AsyncdataService {
       sal +
       "}";
     console.log(this.postdata);
-    return this.http.post("http://localhost:8888/addemp", this.postdata, {
-      headers: new HttpHeaders({ "Content-Type": "application/json" })
+    return this.http.put("http://localhost:8079/update", this.postdata, {
+      headers: new HttpHeaders({})
     });
   }
 }
